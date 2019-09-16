@@ -1,5 +1,4 @@
 // Test away
-
 import React from 'react';
 import { render, fireEvent } from 'react-testing-library'
 import Dashboard from './Dashboard';
@@ -11,7 +10,6 @@ test('contains text for default state: unlocked and open', () => {
   getByText(/lock gate/i);
   getByText(/close gate/i);
 });
-
 
 test('open/close gate is disabled when gate is locked', () => {
   const {getByText} = render(<Dashboard />);

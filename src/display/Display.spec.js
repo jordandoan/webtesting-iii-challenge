@@ -2,6 +2,7 @@
 import React from "react";
 import { render } from 'react-testing-library'
 import Display from './Display';
+
 test('display closed or open based on prop, and if displaying correct color', () => {
   const {getByTestId, rerender, unmount} = render(<Display locked={false} closed={false} />);
   expect(getByTestId("closed").textContent).toBe("Open");
