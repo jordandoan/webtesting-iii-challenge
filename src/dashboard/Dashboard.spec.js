@@ -19,3 +19,8 @@ test('open/close gate is disabled when gate is locked', () => {
   fireEvent.click(getByText(/lock gate/i));
   expect(getByText(/open gate/i).disabled).toBeTruthy();
 });
+
+test('cannot lock gate if gate is open', () => {
+  const {getByText} = render(<Dashboard />);
+  expect(getByText(/open gate/i).disabled).toBeTruthy();
+});
